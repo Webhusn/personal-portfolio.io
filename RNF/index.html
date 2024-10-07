@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stress Management App - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <div id="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">StressEase</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#profileModal">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#paymentModal">Payment History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#settingsModal">Settings</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-12">
+                <input type="text" class="form-control" id="searchBar" placeholder="Search for stress management solutions...">
+            </div>
+        </div>
+    </div>
+
+    <!-- Home Screen Section -->
+    <div class="container mt-5">
+        <div class="row text-center">
+            <h1 class="mb-4 text-center fade-in" style="animation-delay: 0s;">Manage Your Stress</h1>
+            <!-- Categories with Images -->
+            <div class="col-md-4 mb-4">
+                <div class="card p-3 category fade-in" data-bs-toggle="modal" data-bs-target="#mindfulnessModal" style="animation-delay: 0.2s;">
+                    <img src="images/Mindfulness.png" class="img-fluid rounded" alt="Mindfulness Image">
+                    <h5 class="mt-3">Mindfulness</h5>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card p-3 category fade-in" data-bs-toggle="modal" data-bs-target="#physicalActivityModal" style="animation-delay: 0.4s;">
+                    <img src="images/Physical Activity.jpg" class="img-fluid rounded" alt="Physical Activity Image">
+                    <h5 class="mt-3">Physical Activity</h5>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card p-3 category fade-in" data-bs-toggle="modal" data-bs-target="#sleepSupportModal" style="animation-delay: 0.6s;">
+                    <img src="images/sleep-support.jpg" class="img-fluid rounded" alt="Sleep Support Image">
+                    <h5 class="mt-3">Sleep Support</h5>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card p-3 category fade-in" data-bs-toggle="modal" data-bs-target="#relaxationModal" style="animation-delay: 0.8s;">
+                    <img src="images/Relaxation.png" class="img-fluid rounded" alt="Relaxation Image">
+                    <h5 class="mt-3">Relaxation</h5>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card p-3 category fade-in" data-bs-toggle="modal" data-bs-target="#dailyReflectionModal" style="animation-delay: 1s;">
+                    <img src="images/Daily Reflection.jpeg" class="img-fluid rounded" alt="Daily Reflection Image">
+                    <h5 class="mt-3">Daily Reflection</h5>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card p-3 category fade-in" data-bs-toggle="modal" data-bs-target="#nutritionModal" style="animation-delay: 1.2s;">
+                    <img src="images/Nutrition.jpg" class="img-fluid rounded" alt="Nutrition Image">
+                    <h5 class="mt-3">Nutrition</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modals for Categories -->
+
+    <!-- Mindfulness Modal -->
+    <div class="modal fade" id="mindfulnessModal" tabindex="-1" aria-labelledby="mindfulnessModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mindfulnessModalLabel">Mindfulness</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li>Guided Meditation</li>
+                        <li>Body Scan</li>
+                        <li>Breathing Exercises</li>
+                        <li>Meditation Timer</li>
+                    </ul>
+                    <!-- Feedback Form -->
+                    <div class="form-group mt-4">
+                        <label for="feedbackMindfulness">How effective was this solution for you?</label>
+                        <select class="form-select" id="feedbackMindfulness">
+                            <option value="1">1 - Not Effective</option>
+                            <option value="2">2 - Slightly Effective</option>
+                            <option value="3">3 - Neutral</option>
+                            <option value="4">4 - Effective</option>
+                            <option value="5">5 - Very Effective</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Physical Activity Modal -->
+<div class="modal fade" id="physicalActivityModal" tabindex="-1" aria-labelledby="physicalActivityModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="physicalActivityModalLabel">Physical Activity</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li>Yoga</li>
+                    <li>Stretching Exercises</li>
+                    <li>Cardio Workouts</li>
+                    <li>Strength Training</li>
+                </ul>
+                <!-- Feedback Form -->
+                <div class="form-group mt-4">
+                    <label for="feedbackPhysicalActivity">How effective was this solution for you?</label>
+                    <select class="form-select" id="feedbackPhysicalActivity">
+                        <option value="1">1 - Not Effective</option>
+                        <option value="2">2 - Slightly Effective</option>
+                        <option value="3">3 - Neutral</option>
+                        <option value="4">4 - Effective</option>
+                        <option value="5">5 - Very Effective</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sleep Support Modal -->
+<div class="modal fade" id="sleepSupportModal" tabindex="-1" aria-labelledby="sleepSupportModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="sleepSupportModalLabel">Sleep Support</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li>Sleep Meditation</li>
+                    <li>Sleep Sounds</li>
+                    <li>Bedtime Stories</li>
+                    <li>Sleep Tracker</li>
+                </ul>
+                <!-- Feedback Form -->
+                <div class="form-group mt-4">
+                    <label for="feedbackSleepSupport">How effective was this solution for you?</label>
+                    <select class="form-select" id="feedbackSleepSupport">
+                        <option value="1">1 - Not Effective</option>
+                        <option value="2">2 - Slightly Effective</option>
+                        <option value="3">3 - Neutral</option>
+                        <option value="4">4 - Effective</option>
+                        <option value="5">5 - Very Effective</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Relaxation Modal -->
+<div class="modal fade" id="relaxationModal" tabindex="-1" aria-labelledby="relaxationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="relaxationModalLabel">Relaxation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li>Ambient Sounds</li>
+                    <li>Nature Soundscapes</li>
+                    <li>Relaxation Music</li>
+                    <li>Progressive Muscle Relaxation</li>
+                </ul>
+                <!-- Feedback Form -->
+                <div class="form-group mt-4">
+                    <label for="feedbackRelaxation">How effective was this solution for you?</label>
+                    <select class="form-select" id="feedbackRelaxation">
+                        <option value="1">1 - Not Effective</option>
+                        <option value="2">2 - Slightly Effective</option>
+                        <option value="3">3 - Neutral</option>
+                        <option value="4">4 - Effective</option>
+                        <option value="5">5 - Very Effective</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Daily Reflection Modal -->
+<div class="modal fade" id="dailyReflectionModal" tabindex="-1" aria-labelledby="dailyReflectionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="dailyReflectionModalLabel">Daily Reflection</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li>Gratitude Journal</li>
+                    <li>Positive Affirmations</li>
+                    <li>Mood Tracking</li>
+                    <li>Daily Reflections</li>
+                </ul>
+                <!-- Feedback Form -->
+                <div class="form-group mt-4">
+                    <label for="feedbackDailyReflection">How effective was this solution for you?</label>
+                    <select class="form-select" id="feedbackDailyReflection">
+                        <option value="1">1 - Not Effective</option>
+                        <option value="2">2 - Slightly Effective</option>
+                        <option value="3">3 - Neutral</option>
+                        <option value="4">4 - Effective</option>
+                        <option value="5">5 - Very Effective</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Nutrition Modal -->
+<div class="modal fade" id="nutritionModal" tabindex="-1" aria-labelledby="nutritionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="nutritionModalLabel">Nutrition</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li>Healthy Recipes</li>
+                    <li>Meal Planning</li>
+                    <li>Hydration Tracking</li>
+                    <li>Stress-Relieving Foods</li>
+                </ul>
+                <!-- Feedback Form -->
+                <div class="form-group mt-4">
+                    <label for="feedbackNutrition">How effective was this solution for you?</label>
+                    <select class="form-select" id="feedbackNutrition">
+                        <option value="1">1 - Not Effective</option>
+                        <option value="2">2 - Slightly Effective</option>
+                        <option value="3">3 - Neutral</option>
+                        <option value="4">4 - Effective</option>
+                        <option value="5">5 - Very Effective</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Profile Modal -->
+    <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="profileModalLabel">User Profile</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" value="JohnDoe">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" value="john@example.com">
+                        </div>
+                        <!-- Progress Tracking -->
+                        <div class="progress mt-4">
+                            <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">Meditation: 70%</div>
+                        </div>
+                        <div class="progress mt-3">
+                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Exercise: 50%</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-4">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="settingsModalLabel">Settings</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="notification" class="form-label">Notification</label>
+                            <select class="form-select" id="notification">
+                                <option selected>Enable Notifications</option>
+                                <option>Disable Notifications</option>
+                            </select>
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="reminderFrequency">Reminder Frequency</label>
+                            <select class="form-select" id="reminderFrequency">
+                                <option value="daily">Daily</option>
+                                <option value="weekly">Weekly</option>
+                                <option value="none">None</option>
+                            </select>
+                        </div>
+                        <div class="form-check form-switch mt-3">
+                            <input class="form-check-input" type="checkbox" id="darkModeSwitch">
+                            <label class="form-check-label" for="darkModeSwitch">Dark Mode</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-4">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment History Modal -->
+    <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="paymentModalLabel">Payment History</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li>Payment on 01/01/2024 - $50</li>
+                        <li>Payment on 15/12/2023 - $30</li>
+                        <li>Payment on 01/11/2023 - $25</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5 py-4">
+        <p>&copy; 2024 StressEase. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+    <div class="form-check form-switch mt-3">
+        <input class="form-check-input" type="checkbox" id="darkModeToggle">
+        <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+    </div>
+    
+    
+    
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+    <link rel="manifest" href="manifest.json">
+</body>
+</html>

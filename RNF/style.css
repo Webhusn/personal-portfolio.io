@@ -1,0 +1,260 @@
+/* Background for entire body */
+body {
+    background: linear-gradient(135deg, #e0f7fa 0%, #f1f8e9 100%);
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+}
+
+.modal-body {
+    max-height: 400px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+    icon-192x192.png
+    icon-512x512.png
+
+
+/* Headings */
+h1 {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 36px;
+    text-align: center;
+}
+
+h5 {
+    font-weight: 400;
+    color: #555;
+    text-align: center;
+}
+
+/* Navbar styling */
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.navbar-nav .nav-link {
+    color: #333;
+    font-size: 1.2rem;
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #00796b;
+    border-color: #00796b;
+}
+
+.btn-primary:hover {
+    background-color: #004d40;
+    border-color: #004d40;
+}
+
+/* Category Card styling */
+.category {
+    height: 400px; /* Set the fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.category img {
+
+    width: 100%;
+    height: 250px; /* Same height for all images */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+.category:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    max-width: 100%; /* Keep card full width */
+    border: none;
+}
+
+/* Spacing between cards */
+.category {
+    margin-bottom: 20px;
+}
+
+/* Modal and search bar styles remain the same */
+
+/* Modal styling */
+.modal-body ul {
+    list-style: none;
+    padding: 0;
+}
+
+.modal-body ul li {
+    padding: 5px 0;
+}
+
+/* Modal transition */
+.modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out;
+    transform: translateY(-30px);
+}
+
+.modal.show .modal-dialog {
+    transform: translateY(0);
+}
+
+/* Dark Mode Support */
+body.dark-mode {
+    background: linear-gradient(135deg, #2e2e2e 0%, #3a3a3a 100%);
+    color: #ffffff;
+}
+
+.dark-mode .card {
+    background-color: #424242;
+    color: #ffffff;
+}
+
+.dark-mode h1, .dark-mode h5 {
+    color: #ffffff;
+}
+
+.dark-mode .navbar {
+    background-color: #212121;
+}
+
+.dark-mode .modal-content {
+    background-color: #424242;
+}
+
+/* Footer styling */
+footer {
+    background-color: #00796b;
+    color: #fff;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Search Bar styling */
+#searchBar {
+    transition: box-shadow 0.3s ease;
+}
+
+#searchBar:focus {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+/* Full-page overlay for the loading spinner */
+#loading-spinner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    display: flex; /* Set to flex to center the spinner */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* High z-index to ensure it's on top */
+}
+
+/* Spinner itself */
+.spinner {
+    border: 12px solid #f3f3f3;
+    border-top: 12px solid #3498db;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 1s linear infinite;
+}
+
+/* Keyframes for spinning effect */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/* Keyframes for spinning effect */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .category {
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+
+    .img-fluid {
+        height: auto;
+    }
+}
+
+/* Dark mode custom styling */
+.dark-mode {
+    background-color: #1c1c1c;
+    color: #ffffff;
+}
+
+.dark-mode .navbar {
+    background-color: #333;
+    color: #ffffff;
+}
+
+.dark-mode .modal-content {
+    background-color: #333;
+    color: #ffffff;
+}
+
+.dark-mode .category {
+    background-color: #424242;
+}
+
+/* Fade-in effect */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+/* Keyframes for fade-in */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .category {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .category img {
+        height: auto;
+        max-height: 200px;
+    }
+}
