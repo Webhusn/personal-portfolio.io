@@ -1,0 +1,745 @@
+/* General Styling */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Button Hover Effects */
+.btn-primary:hover {
+    background-color: #0056b3;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Animation for Section Entry */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* General Section Animation */
+.section {
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.3s;
+}
+
+/* Specific section animation for trial section */
+.trial-section {
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.6s;
+}
+
+/* Form Field Focus Effects */
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.5rem;
+    display: none; /* Initially hidden */
+    z-index: 1000;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+/* Show Back to Top button when scrolling */
+body.scrolled .back-to-top {
+    display: block;
+}
+
+/* Sticky Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+}
+
+/* Custom Checkbox Styling */
+input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #007bff;
+    border-color: #0056b3;
+}
+
+
+/* Button Hover Effects */
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+]
+/* Navbar Styling */
+.navbar {
+    padding: 15px 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+/* Logo Image Styling */
+.logo-image {
+     /* Adjusted height */
+    margin-right: 10px;  /* Spacing between image and text */
+    transition: transform 0.3s ease, border 0.3s ease;  /* Smooth transition for hover effects */
+}
+
+.logo-image:hover {
+    transform: scale(1.1);  /* Slightly enlarge the logo on hover */
+    border: 2px solid #007bff;  /* Optional: Add a border on hover */
+}
+
+/* Logo Text Styling */
+.logo-text {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 28px;   /* Adjusted font size */
+    font-weight: 400;
+    line-height: 50px;  /* Adjusted to align text vertically with image */
+    color: #000;
+    vertical-align: middle;  /* Ensures vertical alignment with image */
+    transition: color 0.3s ease;  /* Add hover effect for text */
+}
+
+.logo-text:hover {
+    color: #007bff;  /* Change text color on hover */
+}
+
+/* Centered Navigation Links */
+.navbar .navbar-nav {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+}
+
+.navbar .nav-link {
+    padding: 0.5rem 1.5rem;  /* Spacing between links */
+    color: #555;
+}
+
+.navbar .nav-link:hover {
+    color: #007bff;
+}
+
+/* Buttons */
+.navbar .btn {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+    border-radius: 5px;
+}
+
+.navbar .btn-outline-primary {
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.navbar .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.navbar .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.navbar .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Shadow for the navbar */
+.navbar.shadow-sm {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section with Overlay */
+.hero {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);  /* Dark overlay to improve readability */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay for the image */
+    z-index: 1;
+}
+
+.hero h1, .hero .btn {
+    position: relative;
+    z-index: 2;  /* To ensure text and button are above overlay */
+}
+
+.hero h1 {
+    font-size: ;
+    font-weight: 400;
+    color: white;
+}
+
+.hero .btn {
+    background-color: #007bff;
+    border-color: #007bff;
+    z-index: 2;
+    margin-top: 20px;
+}
+/* Section Styling */
+.features-section {
+    background-color: #fff;
+    padding: 4rem 0; /* More padding around the section */
+}
+
+.features-section .container {
+    max-width: 1140px; /* Standard container size */
+    margin: 0 auto;
+}
+
+.features-section h2 {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 2rem;
+    text-align: left;  /* Left-align the main heading */
+}
+
+.features-section h4 {
+    font-size: 3rem;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.features-section p {
+    color: #555;
+    line-height: 1.7;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.features-section .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.features-section .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Spacing Between Rows and Columns */
+.features-section .row.gx-5 {
+    --bs-gutter-x: 4rem; /* Increase horizontal space between columns */
+}
+
+.features-section .row.gy-5 {
+    --bs-gutter-y: 4rem; /* Increase vertical space between rows */
+}
+
+/* Card Hover Effect */
+.feature-card {
+    background-color: #f8f9fa; /* Light background color for cards */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 2rem;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Shadow on hover */
+}
+/* General Styling */
+.social-media-section {
+    background-color: #fff;  /* White background */
+    padding: 4rem 0;  /* Padding around the section */
+}
+
+.social-media-section h2 {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.social-media-section p.lead {
+    font-size: 1.25rem;
+    color: #6c757d;  /* Muted subtitle color */
+}
+
+/* Left Column Styling */
+.feature-item h4 {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+
+.feature-item p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+/* Right Column (Image) */
+.image-container {
+    text-align: right;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;  /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);  /* Shadow around the image */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.05);  /* Slight zoom on hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);  /* More pronounced shadow on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .social-media-section h2 {
+        font-size: 2rem;
+    }
+
+    .social-media-section p.lead {
+        font-size: 1rem;
+    }
+
+    .image-container {
+        text-align: center;  /* Center the image on smaller screens */
+    }
+}
+/* General Styling for the Section */
+.photo-styling-section {
+    background-color: #fff;
+    padding: 4rem 0;
+}
+
+.photo-styling-section h2 {
+    font-size:2.5rem;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.photo-styling-section p.lead {
+    font-size: 2rem;
+    color: #6c757d;
+}
+
+/* Card Styling */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 450px; /* Set a consistent height for the cards */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Shadow effect on hover */
+}
+
+.card-img-top {
+    height: 220px; /* Adjusted image height to make cards taller */
+    width: 100%;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+}/* General Styling for the Section */
+.trial-section {
+    background-color: #fff;
+    padding: 4rem 0;
+    text-align: center;  /* Center align the heading and text */
+}
+
+.trial-section h2 {
+    font-size: 3rem; /* Smaller heading */
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.trial-section p.lead {
+    font-size: 2rem; /* Smaller text */
+    color: #6c757d;
+    margin-bottom: 2rem;
+}
+
+/* Form Styling */
+.signup-form {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+    max-width: 500px; /* Limit form width */
+    margin: 0 auto; /* Center the form */
+}
+
+.signup-form input {
+    padding: 0.75rem;
+    font-size: 1rem;
+    margin-bottom: 1rem; /* Add spacing between inputs */
+    border-radius: 5px; /* Rounded input corners */
+    border: 1px solid #ccc; /* Light border for inputs */
+}
+
+/* Register Button - Left Aligned */
+.signup-form .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 0.75rem 1.5rem; /* Adjust button size */
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 6px;
+    width: auto; /* Auto width to fit content */
+    text-align: left; /* Align text inside the button to the left */
+    display: inline-block; /* Keep button inline */
+    margin-top: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Ensure the button stays left-aligned */
+.signup-form {
+    text-align: left; /* Align button to the left */
+}
+
+/* Hover Effect for the Button */
+.signup-form .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+}
+
+.footer-section h5 {
+    color: #fff;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;  /* Add space between links */
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+/* Logo Section */
+.logo-section {
+    display: flex;
+    align-items: center;  /* Ensure the logo image and text are aligned */
+    margin-bottom: 1rem;
+}
+
+.footer-logo {
+    width: 50px;  /* Adjust the logo size */
+    height: auto;
+    margin-right: 10px;  /* Spacing between logo and text */
+}
+
+.footer-section .logo-text {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 28.44px;
+    font-weight: 400;
+    line-height: 31.72px;
+    letter-spacing: -0.015em;
+    color: #fff;  /* Ensure the logo text is white */
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+}
+
+.footer-section h5 {
+    color: #fff;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;  /* Add space between links */
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+/* Logo Section */
+.logo-section {
+    display: flex;
+    align-items: center;  /* Ensure the logo image and text are aligned */
+    margin-bottom: 1rem;
+}
+
+.footer-logo {
+    width: 30px;  /* Adjust the logo size */
+    height: auto;
+    margin-right: 10px;  /* Spacing between logo and text */
+}
+
+.logo-text {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 28.44px;
+    font-weight: 400;
+    line-height: 31.72px;
+    letter-spacing: -0.015em;
+    color:black;  /* Ensure the logo text is white */
+}
+
+/* Buttons Styling */
+.footer-section .btn-primary,
+.footer-section .btn-outline-light {
+    padding: 0.4rem 0.8rem;
+    font-size: 1.1rem;
+    display: block;  /* Ensure buttons are stacked vertically */
+    white-space: nowrap;
+    border-radius: 5px;
+}
+
+.footer-section .btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.footer-section .btn-outline-light {
+    color: #007bff;
+    border: 2px solid white;
+    background-color: white;
+}
+
+/* Add spacing between buttons */
+.footer-section .btn-primary {
+    margin-bottom: 1rem;  /* Add space below the Register button */
+}
+
+/* Social Media Icon Styling */
+.footer-section .social-icon {
+    color: #ccc;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    border-radius: 50%;
+    padding: 0.5rem;
+    background-color: #444;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer-section .social-icon:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Horizontal Line */
+.footer-section hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 2rem 0;
+    width: 100%;
+}
+
+
+/* Social Media Icon Styling */
+.footer-section .social-icon {
+    color: #ccc;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    border-radius: 50%;
+    padding: 0.5rem;
+    background-color: #444;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer-section .social-icon:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Horizontal Line */
+.footer-section hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 2rem 0;
+    width: 100%;
+}
+
+/* Horizontal Divider Styling */
+.section-divider {
+    width: 100%;
+    height: 100px; /* Adjust the thickness of the divider */
+    background-color: #f1f1f1; /* Light grey color for the divider */
+    margin: 2rem 0; /* Space above and below the divider */
+}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .trial-section h2 {
+        font-size: 2rem;
+    }
+
+    .trial-section p.lead {
+        font-size: 1rem;
+    }
+
+    .signup-form {
+        padding: 1.5rem;
+    }
+
+    .signup-form .btn-primary {
+        font-size: 1.25rem; /* Slightly smaller on mobile */
+    }
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .photo-styling-section h2 {
+        font-size: 2rem;
+    }
+
+    .photo-styling-section p.lead {
+        font-size: 1rem;
+    }
+
+    .card {
+        min-height: 400px; /* Smaller height for mobile */
+    }
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .features-section h2 {
+        font-size: 2rem;
+    }
+
+    .features-section h4 {
+        font-size: 1.25rem;
+    }
+
+    .feature-card {
+        padding: 1.5rem; /* Reduce padding on smaller screens */
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .navbar .navbar-brand {
+        font-size: 1.1rem;
+    }
+
+    .navbar .nav-link {
+        padding: 0.25rem 0.75rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero .btn-lg {
+        padding: 0.75rem 1.25rem;
+        font-size: 1rem;
+    }
+}
