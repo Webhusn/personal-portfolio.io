@@ -1,0 +1,273 @@
+/* Import Inter Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f9f9f9;
+}
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.title-text {
+    color: #FF6B82;
+    font-weight: 600;
+    font-size: 26px;
+    text-align: center;
+    position: relative;
+    padding: 0 15px; /* Add padding to make space for the lines */
+}
+
+.title-container::before,
+.title-container::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #D1D5DB; /* Light gray color for the lines */
+}
+
+.title-container::before {
+    margin-right: 15px;
+}
+
+.title-container::after {
+    margin-left: 15px;
+}
+
+.option-box {
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.option-box.highlight {
+    border: 2px solid #FF6B82!important;
+    box-shadow: 0 0 8px rgba(255, 107, 130, 0.5);
+}
+
+.price-text {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+
+.unit-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.discount-badge {
+    background-color: #FF6B82;
+    color: white;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.old-price {
+    font-size: 12px;
+    color: #7D7D7D;
+    text-decoration: line-through;
+    opacity: 0.3;
+    width: auto;
+    margin-left: 5px; /* Adds some spacing between new price and old price */
+}
+
+.option-box {
+    position: relative;
+    /* Other styling for the option box */
+}
+
+.option-box {
+    position: relative;
+}
+
+.most-popular-badge {
+    display: inline-block;
+    background-color: #FF6B82;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    width: 119px;
+    height: 26px;
+    line-height: 26px; /* Center text vertically */
+    text-align: center;
+    border-radius: 0px 0px 4px 4px;
+    position: absolute;
+    top: -13px;
+    right: 0px;
+}
+
+/* Left angled tab */
+.most-popular-badge::before {
+    content: "";
+    position: absolute;
+    left: -4px;
+    top: 0px;
+    width: 0;
+    height: 0;
+    border-top: 13px solid #FF6B82;
+    border-right: 6px solid transparent;
+    border-bottom: 13px solid transparent;
+}
+
+/* Right angled tab */
+.most-popular-badge::after {
+   
+    content: "";
+    position: absolute;
+    right: -6px;
+    top: 0px;
+    width: 0;
+    height: 0;
+    border-top: 13px solid #FF6B82;
+    border-left: 8px solid transparent;
+    border-bottom: 13px solid transparent;
+}
+
+
+.free-delivery-text {
+    color: #FF6B82;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.additional-options {
+    padding: 15px;
+    display: none;
+}
+
+
+/* Custom radio button container */
+.custom-radio {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin: 10px 0;
+}
+
+/* Hide the default radio button */
+.custom-radio input[type="radio"] {
+    opacity: 0;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+/* Custom radio button container */
+.custom-radio {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    margin: 10px 0;
+}
+
+/* Hide the default radio button */
+.custom-radio input[type="radio"] {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* Outer circle (unselected state) */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #FF6B82; /* Light pink outline */
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Inner pink dot */
+.checkmark:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: #FF6B82; /* Solid pink inner dot */
+    border-radius: 50%;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.2s ease;
+}
+
+/* When checked, show inner dot and add light pink background */
+.custom-radio input[type="radio"]:checked + .checkmark {
+    background-color: rgba(255, 107, 130, 0.2); /* Soft pink outer ring */
+}
+
+.custom-radio input[type="radio"]:checked + .checkmark:before {
+    opacity: 1; /* Show inner pink dot when checked */
+}
+
+
+
+
+.add-to-cart-btn {
+    background-color: #FF6B82;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 12px 0;
+    border-radius: 4px;
+}
+.add-to-cart-btn:hover {
+    background-color: #FF4E6E;
+    transition: background-color 0.2s ease;
+}
+.option-box:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+/* Smooth transition for expanding options */
+.additional-options {
+    padding: 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    display: none; /* Initially hidden */
+}
+
+.option-box.highlight .additional-options {
+    display: block;
+    max-height: 150px; /* Adjust based on content */
+}
+
+/* Button hover effect */
+.add-to-cart-btn:hover {
+    background-color: #FF4E6E!important;
+    transition: background-color 0.2s ease;
+    color:#FFF;
+}
+
+/* Enhanced shadow on hover for boxes */
+.option-box:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .box {
+        padding: 15px;
+    }
+}
