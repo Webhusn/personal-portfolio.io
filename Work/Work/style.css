@@ -188,14 +188,15 @@ body {
 .card-1 {
     position: absolute;
     top: 28px;
-    left: -84px;/* Horizontal positioning */
-    width: 220px; /* Width matches the original reference */
-    height: 90px; /* Height adjusted for proportions */
+    left: -122px;
+    width: 276px;
+    height: 99px;
     background: white;
-    border-radius: 15px; /* Smooth rounded corners */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    padding: 15px 20px; /* Inner spacing for content */
-    display: flex;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    display: flex
+;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -252,33 +253,35 @@ body {
     color: #000;
 }
 /* Card Container */
+
 .card-3 {
     position: absolute;
     bottom: -40px;
-    right: -30px;
-    width: 200px; /* Adjusted card width */
-    height: 120px; /* Adjusted card height */
-    background: linear-gradient(135deg, #1e272e, #34495e); /* Dark gradient for credit card */
+    right: -41px;
+    width: 176px;
+    height: 239px;
+    background: linear-gradient(135deg, #1e272e, #34495e);
     color: white;
     border-radius: 15px;
     padding: 15px;
-    display: flex;
+    display: flex
+;
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    transform: rotate(-5deg);
+    transform: rotate(20deg);
 }
 
 /* Circles for the card design */
 .card-circles {
     display: flex;
-    gap: 8px;
-    margin-bottom: 10px;
+    gap: 0px;
+    margin-bottom: 35px;
 }
 
 .card-circles .circle {
-    width: 12px;
-    height: 12px;
+    width: 18px;
+    height: 33px;
     background: rgba(255, 255, 255, 0.3);
     border-radius: 50%;
 }
@@ -294,7 +297,7 @@ body {
 .card-number {
     display: flex;
     justify-content: flex-start;
-    gap: 6px;
+    gap: 0px;
     font-size: 0.95rem;
     letter-spacing: 1.5px;
     margin-bottom: 10px;
@@ -309,27 +312,26 @@ body {
     margin: 5px 0;
 }
 
+
 .card-chip {
-    width: 35px;
-    height: 20px;
+    width: 66px;
+    height: 41px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 4px;
     position: absolute;
-    left: 10px; /* Keep chip closer to the left side */
-    top: 0px; /* Adjusted to align with the top of the card */
+    left: -2px;
+    top: 26px;
 }
-
 /* Circular Highlight for Chip */
 .chip-circle {
     position: absolute;
-    width: 60px; /* Smaller circle for better alignment */
-    height: 60px;
+    width: 101px;
+    height: 100px;
     border-radius: 50%;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    left: -3px;
-    top: -21px; /* Adjust circle to surround the chip */
+    background: rgba(135, 131, 131, 0.3);
+    left: -17px;
+    top: -1px;
 }
-
 /* Expiry Date */
 .expiry {
     font-size: 0.8rem;
