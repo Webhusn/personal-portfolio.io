@@ -1,0 +1,383 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+/* Header Section */
+.custom-header {
+    background: #ffffff;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #548163;
+}
+
+.navbar-nav {
+    margin: 0 auto;
+}
+
+.navbar-nav .nav-link {
+    color: #6f6f6f !important;
+    margin: 0 15px;
+}
+
+.navbar-nav .nav-link.active {
+    color: #000 !important;
+    font-weight: bold;
+}
+
+.btn-outline-secondary {
+    color: #548163;
+    border-color: #548163;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #548163;
+    color: white;
+}
+
+.btn-success {
+    background-color: #548163;
+    border-color: #548163;
+    font-weight: bold;
+}
+
+.btn-success:hover {
+    background-color: #456c53;
+    border-color: #456c53;
+}
+
+/* Hero Section */
+/* Hero Line Styling */
+.hero-line {
+    margin: 20px 0; /* Add space around the line */
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.hero-section {
+    background: linear-gradient(to right, #d7f2ed, #ffffff);
+    height: calc(100vh - 80px); /* Full height minus header */
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #000; /* Black color for heading */
+    line-height: 1.2;
+}
+
+.hero-content h1 span {
+    color: #48c6ef;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-top: 20px;
+    max-width: 80%;
+    line-height: 1.6; /* Adjusted spacing */
+}
+
+.hero-buttons .btn-primary {
+    background-color: #548163;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 20px; /* Rounded button corners */
+}
+
+.hero-buttons .btn-primary:hover {
+    background-color: #456c53;
+}
+
+.hero-buttons .btn-outline-secondary {
+    color: #333; /* Dark grey for View Demo */
+    border-color: #333; /* Border for View Demo */
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 20px; /* Rounded button corners */
+}
+
+.hero-buttons .btn-outline-secondary:hover {
+    background-color: #333;
+    color: white;
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 50%;
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+.person-img {
+    max-width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+/* Floating Cards Section */
+.floating-cards-section {
+    height: 100vh; /* Full height section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #d7f2ed, #ffffff);
+    position: relative;
+}
+
+.person-container {
+    position: relative;
+    text-align: center;
+}
+
+/* Background Shape */
+.background-shape {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #48c6ef;
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+    z-index: -1;
+    border-radius: 20px;
+}
+
+/* Person Image */
+.person-img {
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+/* Floating Cards */
+.floating-card {
+    position: absolute;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+/* Card 1 Styling */
+.card-1 {
+    position: absolute;
+    top: 28px;
+    left: -84px;/* Horizontal positioning */
+    width: 220px; /* Width matches the original reference */
+    height: 90px; /* Height adjusted for proportions */
+    background: white;
+    border-radius: 15px; /* Smooth rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 15px 20px; /* Inner spacing for content */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Text Label */
+.card-1 p {
+    margin: 0;
+    font-size: 0.9rem; /* Slightly larger font size */
+    color: #7f8c8d; /* Soft gray color */
+    margin-bottom: 5px; /* Space below label */
+}
+
+/* Amount Container */
+.card-1 .amount-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px; /* Space between label and amount */
+    padding-top: 8px; /* Space above divider */
+    border-top: 1px solid rgba(0, 0, 0, 0.1); /* Divider line */
+}
+
+.card-1 strong {
+    font-size: 1.2rem; /* Bold and clear font size */
+    color: #000; /* Black color for emphasis */
+    margin-right: 15px; /* Spacing between amount text and button */
+}
+
+/* Button Styling */
+.card-1 button {
+    background-color: #548163;
+    border: none;
+    padding: 6px 20px; /* Button dimensions match reference */
+    font-size: 0.85rem; /* Slightly larger font size for button text */
+    color: white;
+    border-radius: 20px; /* Smooth button corners */
+    cursor: pointer;
+    line-height: 1;
+    text-align: center;
+}
+
+.card-1 button:hover {
+    background-color: #456c53; /* Hover effect for button */
+}
+/* Card 2: Bottom Left */
+.card-2 {
+    bottom: 10px;
+    left: -100px;
+    width: 160px;
+}
+
+.card-2 strong {
+    font-size: 1.1rem;
+    color: #000;
+}
+/* Card Container */
+.card-3 {
+    position: absolute;
+    bottom: -40px;
+    right: -30px;
+    width: 200px; /* Adjusted card width */
+    height: 120px; /* Adjusted card height */
+    background: linear-gradient(135deg, #1e272e, #34495e); /* Dark gradient for credit card */
+    color: white;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: rotate(-5deg);
+}
+
+/* Circles for the card design */
+.card-circles {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.card-circles .circle {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+}
+
+/* Card Title */
+.card-title {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+/* Card Number */
+.card-number {
+    display: flex;
+    justify-content: flex-start;
+    gap: 6px;
+    font-size: 0.95rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+/* Chip Design */
+.card-chip-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.card-chip {
+    width: 35px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    position: absolute;
+    left: 10px; /* Keep chip closer to the left side */
+    top: 0px; /* Adjusted to align with the top of the card */
+}
+
+/* Circular Highlight for Chip */
+.chip-circle {
+    position: absolute;
+    width: 60px; /* Smaller circle for better alignment */
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    left: -3px;
+    top: -21px; /* Adjust circle to surround the chip */
+}
+
+/* Expiry Date */
+.expiry {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: right;
+    margin-top: auto;
+}
+
+
+/* Collabs Section */
+.collabs-section {
+    text-align: center;
+    margin: 50px 0;
+    padding: 20px;
+}
+
+.collabs-section h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.collabs-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px; /* Space between each logo item */
+}
+
+.logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between icon and text */
+    color: #7f8c8d;
+    font-size: 20px;
+}
+
+.logo-item img {
+    width: 50px; /* Adjust icon size */
+    height: 50px;
+    object-fit: contain; /* Maintain aspect ratio */
+}
+
+.logo-item span {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #7f8c8d; /* Light gray color for text */
+}
+
