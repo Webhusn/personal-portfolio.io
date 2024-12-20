@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --mono-font: "Montserrat", serif;
+    --lexend-font: "Lexend Deca", serif;
+    --outfit-font: "Outfit", serif;
+
+
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--mono-font);
+}
+
+
+
+.connent {
+    max-width: 131px;
+    height: 35px;
+    text-align: center;
+    border-radius: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #F0642C, #D7450E);
+}
+
+.viewMore {
+    min-width: 151px;
+    height: 45px;
+    text-align: center;
+    border-radius: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #F0642C, #D7450E);
+}
+
+.heading {
+    font-weight: 700;
+    line-height: 29px;
+    color: #000;
+}
+
+.designation {
+    font-family: var(--lexend-font);
+    color: #F0642C !important;
+    font-size: 16px;
+    line-height: 22ppx;
+
+}
+
+
+.meters,
+.location {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #424242;
+    font-family: var(--lexend-font);
+    margin-bottom: 0;
+}
+
+
+.testimonialContext {
+    border-top-left-radius: 0.91px;
+    border-top-right-radius: 0.91px;
+    border-bottom-right-radius: 0.91px;
+    border-bottom-left-radius: 36.39px;
+    background-color: #ffffff;
+    padding: 63px 43px;
+    font-family: var(--lexend-font);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22ppx;
+
+}
+
+.testimonialContext2 {
+    border-top-left-radius: 36.39px;
+    border-top-right-radius: 0.91px;
+    border-bottom-right-radius: 0.91px;
+    border-bottom-left-radius: 0.91px;
+    background-color: #ffffff;
+    padding: 63px 43px;
+    font-family: var(--lexend-font);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22ppx;
+
+}
+
+.testimonial-card {
+    position: relative;
+}
+
+.testimonial {
+    background-color: #201D32;
+}
+
+.userName h5 {
+    color: #FFFFFF;
+    font-size: 30px;
+    font-weight: 700;
+
+
+}
+
+
+.userName p {
+    font-family: var(--outfit-font);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #D7D7D7;
+
+
+}
+
+.testimonial-card:before {
+    content: "“";
+    font-size: 50px;
+    color: #D7450E;
+    font-weight: 400;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+.profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile h5 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.profile p {
+    margin: 0;
+    font-size: 14px;
+    color: #777777;
+}
+
+.divider {
+    width: 1px;
+    height: 20px;
+    background-color: lightgray;
+}
+
+.item {
+    font-size: 16px;
+    padding: 10px;
+    font-family: var(--lexend-font);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    color: #707070;
+    text-align: center;
+
+}
+
+.item1 {
+    border-left: 1px solid #CFCFCF;
+    border-right: 1px solid #CFCFCF;
+}
+
+.item2 {
+
+    border-right: 1px solid #CFCFCF;
+}
+
+.item3 {
+
+    border-right: 1px solid #CFCFCF;
+}
+
+.item4 {
+
+    border-right: 1px solid #CFCFCF;
+}
+
+
+.headerLocation {
+    font-family: var(--outfit-font);
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 24px;
+}
+
+.social-icons {
+    font-family: var(--mono-font);
+}
+
+.form-select {
+    border-radius: 32px;
+    background: linear-gradient(to bottom, #F0642C, #D7450E) !important;
+    color: white !important;
+    --bs-form-select-bg-img: url('/images/carretdown.png');
+    height: 40px;
+    text-align: center;
+    outline: none;
+    border: none;
+}
+
+.quicklink {
+    margin-left: -20px;
+    ;
+}
+
+.searchInput img {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.searchInput input {
+    height: 44px;
+}
+
+.carretDwon {
+    position: absolute;
+    top: 15px;
+    right: 11px;
+}
+
+.aboutus {
+    position: relative;
+}
+
+.bg-1 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    max-width: 120px;
+}
+
+.bg-2 {
+    position: absolute;
+    right: -50px;
+    bottom: 0;
+    max-width: 55px;
+}
+
+.service-box p {
+    font-family: var(--lexend-font);
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+@media (max-width:1024px) {
+
+    .bg-1 {
+        display: none;
+    }
+
+    .bg-2 {
+        display: none;
+    }
+
+    .text-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+
+
+@media (max-width:768px) {
+    .quicklink {
+        margin-left: 0;
+    }
+
+    .navbar-brand img {
+        max-width: 150px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    .category-box {
+        padding: 9px;
+    }
+    h1{
+        font-size: 23px;
+        line-height: 35px;
+    }
+    .hero-section{
+        height: 400px;
+    }
+    .item{
+        font-size: 14px;
+    }
+
+
+}
+
+
+.footer-links a {
+    text-decoration: none;
+}
