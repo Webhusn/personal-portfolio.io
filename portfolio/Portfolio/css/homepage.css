@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary-color: #684f2c;
+  --secondry-color: #f3eee4;
+  --white-color: #ffffff;
+  --footer-color: #000;
+  --border-color: #dee2e6;
+  --primary-button-hover: #49351a;
+  --anchor-hover:#f0c990;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Raleway", sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding-top: 120px;
+}
+#About,#Skill, #Project, #Contact, #Education{
+  scroll-margin-top: 90px; ;
+}
+
+/* Navbar Css */
+.bg-linear {
+ background-color: var(--primary-color);
+}
+
+.navbar-hidden {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+.nav-item > .nav-link {
+  color: white !important;
+  font-size: 20px;
+}
+
+.navbar-brand img {
+  width: 250px;
+}
+
+.navbar-toggler {
+  border: 0px;
+}
+.Logo{
+  max-width: 70px;
+
+}
+
+.navbar-toggler-icon {
+  background-image: url("/assests/icons/menu2.svg") !important;
+  transition: background-image 0.3s ease-in;
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+  background-image: url("/assests/icons/close.svg") !important;
+}
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+.dropdown-menu .dropdown-item {
+  display: inline-block;
+  font-size: 20px !important;
+  margin-block: 10px;
+}
+.nav-item a {
+  transition: all 0.2s ease-in;
+}
+.nav-item a:hover{
+  color: var(--anchor-hover)  !important;
+}
+
+
+
+.width {
+  width: 100%;
+}
+
+
+
+.form-control,
+.form-select,
+.btn {
+  border-radius: 3px !important;
+}
+
+
+.form-select,
+.form-control {
+  padding-block: 15px;
+}
+.form-select:focus,
+.form-control:focus {
+  box-shadow: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .width {
+    width: 80%;
+  }
+
+  .navbar-brand img {
+    width: 210px;
+  }
+
+  .list-with-us {
+    height: 500px !important;
+  }
+}
+
+/* Swiper Css  */
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.mySwiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-height: 95vh;
+  transition: transform 0.5s ease-in-out;
+}
+
+
+
+
+
+.aboutus {
+  background-color: var(--secondry-color);
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Footer Css */
+.footer {
+  background: var(--footer-color);
+}
+.footer a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+.inner-footer {
+  background-color: var(--primary-color);
+}
+
+
+
+.slider {
+  position: relative;
+}
+
+
+.slider-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+
+
+.button-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 15px 20px;
+  text-decoration: none;
+  border-radius: 3px;
+  margin: 5px 0 0 0;
+  transition: all 0.3s ease;
+}
+.button-primary:hover {
+  background-color: var(--primary-button-hover);
+}
+
+
+
+.hero .social-icons i{
+  border: 1px solid black;
+  color: #000;
+  transition: all 0.3s ease;
+}
+.hero .social-icons i:hover{
+  color: #fff;
+  border: 1px solid #fff;
+}
+.hero .social-icons .fa-x-twitter:hover {
+  background-color:black;
+  color: #fff;
+}
+.social-icons i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+}
+.fa-facebook-f,
+.fa-instagram,
+.fa-x-twitter,
+.fa-linkedin-in {
+  color: var(--white-color);
+  border: 1px solid #fff;
+  transition: all 0.2s ease-in-out;
+}
+.fa-facebook-f:hover {
+  background-color: #1877f2;
+}
+.fa-instagram:hover {
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+}
+.fa-x-twitter:hover {
+  background-color: #fff;
+  color: #000;
+}
+.fa-linkedin-in:hover {
+  background-color: #0077b5;
+}
+
+.quick-links li a,
+.policies li a {
+  transition: all 0.3s ease-in;
+}
+.quick-links li a:hover,
+.policies li a:hover {
+  text-decoration: underline !important;
+}
+
+/* Responsive Css */
+@media (min-width: 992px) {
+  .navbar-nav .nav-item.dropdown .nav-link::after {
+    display: none;
+  }
+
+  .navbar-nav .nav-item.dropdown .dropdown-menu {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+
+  .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 991px) {
+  .banner-content {
+    max-width: 95%;
+  }
+
+  .form {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    padding: 0px !important;
+    background: #fcfcfc57;
+    border-radius: 5px;
+    z-index: 9999;
+  }
+
+
+
+  .navbar-brand img {
+    width: 210px;
+  }
+
+}
+
+
+
+.cvbtn{
+  min-width: 250px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 15px 20px;
+  background-color: var(--secondry-color);
+  color: #000 !important;
+  font-weight: 700;
+  letter-spacing: 2px;
+  transition: all 0.2s ease-in-out;
+}
+.cvbtn:hover{
+  transform: translateY(30px);
+}
+.mylang {
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 5px 32px #7a7a7d5e;
+  backdrop-filter: blur(80px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, .18);
+  color: #fff;
+}
+.skills :nth-child(odd) {
+  font-size: 13px;
+  border-radius: 50px;
+}
+
+.skillimg {
+  display: inline-block;
+  border-radius: 50%;
+  padding: 20px;
+  box-shadow: 0 3px 7px #1046c54d;
+}
+.card-text{
+  color: #000;
+}
+.education-title {
+  color:var(--primary-color);
+  font-size: 25px;
+}
+.subheading {
+  font-size: 19px;
+  font-weight: 300 !important;
+  line-height: 1.7rem;
+  white-space: normal;
+}
+.btn-search {
+  background: var(--primary-color);
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 600;
+  transition: all 0.3s ease-in;
+  padding-block: 15px;
+}
+.btn-search:hover {
+  background-color: var(--primary-button-hover) !important;
+  color: var(--white-color) !important;
+}
+
+textarea{
+  resize: none;
+}
+
+.social-icons a{
+  text-decoration: none;
+}
