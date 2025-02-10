@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home - Group Concorde</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Full-Screen Background Image -->
+    <div class="background"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row align-items-center py-3">
+                <!-- Navigation Toggle (Left) -->
+                <div class="col-4 text-start">
+                    <button class="nav-toggle">☰</button>
+                </div>
+                <!-- Logo (Center) -->
+                <div class="col-4 text-center">
+                    <img src="images/Logo.png" alt="Group Concorde Logo" class="logo">
+                </div>
+                <!-- Phone Number (Right) -->
+                <div class="col-4 text-end">
+                    <i class="fa-solid fa-phone phone-icon"></i>
+                    <span class="phone-number">+91-124-7125074</span>
+                </div>
+            </div>
+        </div>
+    </header>
+ <!-- ✅ Slider -->
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide active" style="background-image: url('https://placehold.co/1600x900?text=Slide+1');"></div>
+            <div class="slide" style="background-image: url('https://placehold.co/1600x900?text=Slide+2');"></div>
+            <div class="slide" style="background-image: url('https://placehold.co/1600x900?text=Slide+3');"></div>
+        </div>
+
+        <!-- ✅ Navigation Arrows -->
+        <div class="slider-nav">
+            <button onclick="prevSlide()">❮</button>
+            <button onclick="nextSlide()">❯</button>
+        </div>
+
+        <!-- ✅ Navigation Dots -->
+        <div class="slider-dots">
+            <div class="dot active" onclick="goToSlide(0)"></div>
+            <div class="dot" onclick="goToSlide(1)"></div>
+            <div class="dot" onclick="goToSlide(2)"></div>
+        </div>
+    </div>
+        <!-- Navigation Menu (Hidden by Default) -->
+        <div class="nav-overlay">
+            <button class="nav-close"><img src="img/close-icon.png" alt="Close"></button>
+
+            <ul class="nav-menu">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">SERVICES ?</a></li>
+                <li><a href="#">WHO WE ARE</a></li>
+                <li><a href="#">OUR TECHNOLOGY</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+
+            <div class="nav-info">
+                <p><strong>GSSAs</strong> General Sales & Service Agents</p>
+                <p><strong>GSA</strong> General Sales Agent</p>
+                <p><strong>TCM</strong> Total Cargo Management</p>
+                <p><strong>CSA</strong> Cargo Sales Agent</p>
+                <p><strong>BSA</strong> Block Space Agreement</p>
+            </div>
+
+            <div class="nav-social">
+                <span>Follow Us:</span>
+                <a href="#" class="social-circle"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-circle"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-circle"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <!-- ✅ Airline Representation Section -->
+        <section>
+            <div class="container py-5">
+                <!-- Row for Title, Text & Airplane Image -->
+                <div class="row align-items-center fade-in">
+                    <!-- Left Column: Title & Description -->
+                    <div class="col-lg-6">
+                        <h1 class="title">Leader in Airline Representation and Cargo Services</h1>
+                        <p class="description">
+                            Established in 1985, Group Concorde has been an avant-garde customised and tailor made
+                            solutions provider to Airlines with more than 3 decades of experience in Airline
+                            representation (GSSA).
+                        </p>
+                    </div>
+                    <!-- Right Column: Airplane Image -->
+                    <div class="col-lg-6 text-center">
+                        <img src="images/aeroplane.png" alt="Airplane with Flight Path" class="flight-path-img">
+                    </div>
+                </div>
+                <hr class="my-5 fade-in">
+                <h2 class="text-xl font-bold text-gray-800 mt-8 fade-in">A GLANCE AT GROUP CONCORDE</h2>
+                <hr class="my-4 fade-in">
+                <div class="row text-center mt-4 fade-in">
+                    <div class="col-md-3">
+                        <p class="display-4 text-danger counter" data-target="35">0</p>
+                        <p class="text-muted">YEARS OF EXPERIENCE</p>
+                    </div>
+                    <div class="col-md-3">
+                        <p class="display-4 text-danger counter" data-target="18">0</p>
+                        <p class="text-muted">INTERNATIONAL OFFICES</p>
+                    </div>
+                    <div class="col-md-3">
+                        <p class="display-4 text-danger counter" data-target="430">0</p>
+                        <p class="text-muted">STRONG TEAM</p>
+                    </div>
+                    <div class="col-md-3">
+                        <p class="display-4 text-danger counter" data-target="430">0</p>
+                        <p class="text-muted">STRONG TEAM</p>
+                    </div>
+                </div>
+                <div class="row align-items-center fade-in mt-5">
+                    <div class="col-lg-6">
+
+                        <h1 class="title">Our Solutions</h1>
+                    </div>
+                </div>
+                <p class="description fade-in">
+                    Aliquam id varius mauris. Aenean sed ullamcorper eros. Nulla facilisi. Aenean sed felis nec est
+                    ullamcorper consequat. Integer velit tellus, commodo ut sapien sit amet, eleifend lacinia nisi.
+                </p>
+            </div>
+        </section>
+        <div class="container bg mt-5">
+            <div class="content-container">
+                <h1 class="mb-4 heading" id="heading">
+                    General Sales &amp; Service Agent
+                </h1>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img alt="Main image" height="300" id="main-image"
+                            src="https://storage.googleapis.com/a1aa/image/uqjErcx9ilLmtH0p_xl0cRl9vxiO8C1KyOytknDNYnI.jpg"
+                            width="300" />
+                    </div>
+                    <div class="col-md-4">
+                        <p id="content" class="content">
+                            Phasellus malesuada lectus et ex vestibulum semper vitae et dolor. Phasellus posuere eu
+                            lorem vel aliquam. Vivamus egestas sit..
+                            Phasellus malesuada lectus et ex vestibulum semper vitae et dolor. Phasellus posuere eu
+                            lorem vel aliquam. Vivamus egestas sit...
+                        </p>
+                    </div>
+                    <div class="col-md-4 slider">
+                        <img alt="Slider image 1" height="150" onclick="changeContent(1)"
+                            src="https://storage.googleapis.com/a1aa/image/uqjErcx9ilLmtH0p_xl0cRl9vxiO8C1KyOytknDNYnI.jpg"
+                            width="150" />
+                        <img alt="Slider image 2" height="150" onclick="changeContent(2)"
+                            src="https://storage.googleapis.com/a1aa/image/OxgL7sUt_L8Z0c7AUWgvy5DqGwxyc3EGVG6_gnln-wE.jpg"
+                            width="150" />
+                        <img alt="Slider image 3" height="150" onclick="changeContent(3)"
+                            src="https://storage.googleapis.com/a1aa/image/qvTUIKis82ElZ-HdPPI9dvVG1CEG3XpLu88_4_C7J0w.jpg"
+                            width="150" />
+                    </div>
+                </div>
+                <div class="arrow-buttons">
+                    <button onclick="changeContent('prev')">
+                        <i class="fas fa-arrow-left">
+                        </i>
+                    </button>
+                    <button onclick="changeContent('next')">
+                        <i class="fas fa-arrow-right">
+                        </i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="container mx-auto px-4 py-12 ">
+
+            <div class="container mx-auto px-4 py-12 network">
+
+                <!-- ✅ Our Network Section -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+
+                    <!-- ✅ Left Column: Title & Description -->
+                    <div>
+                        <h1 class="text-4xl font- text-gray-900">Our Network</h1>
+                        <p class="text-lg text-gray-600 mt-4 leading-relaxed">
+                            Nulla nibh metus, blandit eget odio sit amet, semper fermentum quam.
+                            Donec mattis mauris diam, sed molestie risus rutrum id, blandit eget
+                            odio sit amet, semper fermentum quam. Donec mattis mauris diam, sed
+                            molestie risus rutrum id.
+                        </p>
+                    </div>
+
+                    <!-- ✅ Right Column: Red Route Card -->
+                    <div class="bg-red-600 text-white p-6 rounded-lg w-full md:w-80">
+                        <h2 class="text-xl ">Find Your Route</h2>
+                        <p class="mt-2 opacity-90">
+                            Check out different air routes and pick the one that suits your needs.
+                        </p>
+                        <a href="#" class="mt-4 flex items-center font-bold">
+                            Compare Rate Now
+                            <span class="ml-2">➡</span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- ✅ Full-Width Map (Correct Height, No Shadow/Border) -->
+                <div class="mt-6 flex justify-center">
+                    <img src="https://storage.googleapis.com/a1aa/image/ZIad92e-Um5ShQHzaOQ2bHJN2LswGMQTQoAXCpHSBmw.jpg"
+                        alt="World map with highlighted regions in pink"
+                        class="w-full md:w-11/12 h-[600px] object-cover">
+                </div>
+
+            </div>
+            <div class="flex flex-col md:flex-row items-center justify-center min-h-screen">
+                <div class="w-full md:w-1/2">
+                    <img alt="Close-up of an airplane engine with a flying airplane in the background"
+                        class="w-full h-full object-cover" height="600"
+                        src="https://storage.googleapis.com/a1aa/image/uu7kNmz0ysEfuwPBiXBFv_UUJG5j2QvqtPwrViGwYbI.jpg"
+                        width="800" />
+                </div>
+                <div class="w-full md:w-1/2 bg-red-600 text-white p-8 relative overflow-hidden">
+                    <div class="absolute left-0 top-1/2 transform -translate-y-1/2">
+                        <button class="text-white text-2xl" onclick="prevSlide()">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+                    <div class="absolute right-0 top-1/2 transform -translate-y-1/2">
+                        <button class="text-white text-2xl" onclick="nextSlide()">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="slider">
+                        <div class="slide p-8">
+                            <h1 class="text-4xl  mb-4">Pushing the Limits Beyond the Ordinary</h1>
+                            <p class="mb-6">
+                                Technology is the back bone of every industry. Technological advancement has been the
+                                driving factor for improving airlines' operational efficiency and integral part of GSSA
+                                solutions.
+                            </p>
+                            <div class="flex items-center mb-6">
+                                <div class="flex items-center mr-4">
+                                    <i class="fas fa-truck mr-2"></i>
+                                    <span>Cargo Track and Trace</span>
+                                </div>
+                                <div class="flex items-center mr-4">
+                                    <i class="fas fa-box mr-2"></i>
+                                    <span>ULD Management</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-plane mr-2"></i>
+                                    <span>Interline Solutions</span>
+                                </div>
+                            </div>
+                            <a class="flex items-center text-white" href="#">
+                                <span>Know More</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                        <!-- Add more slides as needed -->
+                        <div class="slide p-8">
+                            <h1 class="text-4xl font-bold mb-4">Innovating for the Future</h1>
+                            <p class="mb-6">
+                                Our commitment to innovation drives us to develop cutting-edge solutions that enhance
+                                operational efficiency and customer satisfaction.
+                            </p>
+                            <div class="flex items-center mb-6">
+                                <div class="flex items-center mr-4">
+                                    <i class="fas fa-cogs mr-2"></i>
+                                    <span>Advanced Technology</span>
+                                </div>
+                                <div class="flex items-center mr-4">
+                                    <i class="fas fa-chart-line mr-2"></i>
+                                    <span>Performance Optimization</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-globe mr-2"></i>
+                                    <span>Global Reach</span>
+                                </div>
+                            </div>
+                            <a class="flex items-center text-white" href="#">
+                                <span>Discover More</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-8xl mx-auto main">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/3 pr-8">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-plane text-red-500 mr-2">
+                            </i>
+                            <h1 class="text-red-500 font-bold">
+                                HUMBLE BRAG
+                            </h1>
+                        </div>
+                        <h2 class="text-4xl  mb-4">
+                            NAM ID DIAM CONDIMENTUM ENIM MOLESTIE CONGUE VEL ET
+                        </h2>
+                        <p class="text-gray-600 mb-8">
+                            Curabitur posuere neque id nulla venenatis, at semper nisi varius.
+                        </p>
+                        <div class="relative bg-pink-100 p-6 rounded-lg mb-8 card">
+                            <i class="fas fa-quote-left text-red-500 text-2xl mb-4">
+                            </i>
+                            <div class="carousel" id="carousel">
+                                <div class="carousel-item active">
+                                    <p class="text-gray-700 mb-4">
+                                        Aenean hendrerit tellus at elit gravida eu sollicitudin metus lorem. Suspendisse
+                                        tempor odio sit amet est pretium convallis.
+                                    </p>
+                                    <p class="text-gray-500 font-bold">
+                                        Arjun Kumar
+                                    </p>
+                                    <p class="text-gray-400">
+                                        Digital Manager, Vistara Airlines
+                                    </p>
+                                </div>
+                                <div class="carousel-item">
+                                    <p class="text-gray-700 mb-4">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+                                        Praesent libero. Sed cursus ante dapibus diam.
+                                    </p>
+                                    <p class="text-gray-500 font-bold">
+                                        Jane Doe
+                                    </p>
+                                    <p class="text-gray-400">
+                                        Marketing Head, XYZ Corp
+                                    </p>
+                                </div>
+                                <div class="carousel-item">
+                                    <p class="text-gray-700 mb-4">
+                                        Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
+                                        Praesent mauris. Fusce nec tellus sed augue semper porta.
+                                    </p>
+                                    <p class="text-gray-500 font-bold">
+                                        John Smith
+                                    </p>
+                                    <p class="text-gray-400">
+                                        CEO, ABC Inc
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex space-x-2 mt-4 justify-center">
+                                <span class="w-2 h-2 bg-red-500 rounded-full cursor-pointer" onclick="showSlide(0)">
+                                </span>
+                                <span class="w-2 h-2 bg-gray-300 rounded-full cursor-pointer" onclick="showSlide(1)">
+                                </span>
+                                <span class="w-2 h-2 bg-gray-300 rounded-full cursor-pointer" onclick="showSlide(2)">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="relative">
+                            <img alt="Person smiling while working on a laptop"
+                                class="w-full h-full object-cover rounded-lg" height="400"
+                                src="https://storage.googleapis.com/a1aa/image/oQIAFjh0WmkwIuv2tlPWVvTU0b3b71PVMaBq5RapOaA.jpg"
+                                width="600" />
+                            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                                <i class="fas fa-play text-white text-3xl">
+                                </i>
+                            </div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <p class="font-bold">
+                                    Aenean hendrerit tellus at elit gravida eu sollicitudin
+                                </p>
+                                <p class="text-sm">
+                                    AirAsia
+                                </p>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <img alt="Modern airport terminal" class="w-full h-full object-cover rounded-lg"
+                                height="400"
+                                src="https://storage.googleapis.com/a1aa/image/iOsGDoGHS2rc9QHYM2890UT2pKzF1rDHro9Kgkeo0no.jpg"
+                                width="600" />
+                            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                                <i class="fas fa-play text-white text-3xl">
+                                </i>
+                            </div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <p class="font-bold">
+                                    Aenean hendrerit tellus at elit gravida eu sollicitudin
+                                </p>
+                                <p class="text-sm">
+                                    AirAsia
+                                </p>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <img alt="Person walking in a sunset" class="w-full h-full object-cover rounded-lg"
+                                height="400"
+                                src="https://storage.googleapis.com/a1aa/image/46tFGhumaaB3CFagxLpak6Tb2tmuAJ72czTHoaV9oxk.jpg"
+                                width="600" />
+                            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                                <i class="fas fa-play text-white text-3xl">
+                                </i>
+                            </div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <p class="font-bold">
+                                    Aenean hendrerit tellus at elit gravida eu sollicitudin
+                                </p>
+                                <p class="text-sm">
+                                    AirAsia
+                                </p>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <img alt="Person smiling while using a tablet" class="w-full h-full object-cover rounded-lg"
+                                height="400"
+                                src="https://storage.googleapis.com/a1aa/image/LdS76LQgUhA9dlcwcFKZ_5ywCmgc6BzjSzs5ozmNVgw.jpg"
+                                width="600" />
+                            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                                <i class="fas fa-play text-white text-3xl">
+                                </i>
+                            </div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <p class="font-bold">
+                                    Aenean hendrerit tellus at elit gravida eu sollicitudin
+                                </p>
+                                <p class="text-sm">
+                                    AirAsia
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-right mt-4">
+                    <a class="text-red-500 font-bold" href="#">
+                        View All
+                    </a>
+                </div>
+            </div>
+
+            <div class="container mx-auto py-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h1 class="text-3xl font-semibold text-center flex-grow">Aviation Insights</h1>
+                    <a class="text-red-500" href="#">View All</a>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="relative">
+                        <img alt="Airplane flying through the sky with dramatic clouds"
+                            class="w-full h-full object-cover" height="400"
+                            src="https://storage.googleapis.com/a1aa/image/Ebw5Po_wb9Ojk9e6lTaqljzfdoTIh9EJDv1U9yS8WrQ.jpg"
+                            width="600" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 text-white p-4">
+                            Aliquam facilisis libero quis mi scelerisque, non faucibus augue condimentum.
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img alt="Smiling woman in a professional setting" class="w-full h-full object-cover"
+                            height="400"
+                            src="https://storage.googleapis.com/a1aa/image/xO5-i9dsbMnEcQjpThUNhpcANOApr74mcrki_aD-XzA.jpg"
+                            width="600" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 text-white p-4">
+                            Aliquam facilisis libero quis mi scelerisque, non faucibus augue condimentum.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer class=" footer">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap justify-between">
+                    <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                        <h2 class="text-xl font-bold mb-4">GROUP CONCORDE</h2>
+                        <p class="text-sm mb-4">SINCE 1985</p>
+                        <div class="flex items-start mb-4">
+                            <i class="fas fa-map-marker-alt text-xl mr-4"></i>
+                            <p class="text-sm">
+                                9th Floor, Tower A, Pioneer Urban Square Building, Golf Course Road Extension, Sector
+                                62, Gurugram - 122098
+                            </p>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-envelope text-xl mr-4"></i>
+                            <p class="text-sm">marketing@groupconcorde.com</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone-alt text-xl mr-4"></i>
+                            <p class="text-sm">+91-124-7125074 / +91-124-7125081</p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                        <h2 class="text-xl font-bold mb-4">Company Overview</h2>
+                        <ul class="text-sm">
+                            <li class="mb-2">Services</li>
+                            <li class="mb-2">Our Network</li>
+                            <li class="mb-2">Technology</li>
+                            <li class="mb-2">Who we are</li>
+                            <li class="mb-2">Resources</li>
+                            <li class="mb-2">Career</li>
+                        </ul>
+                    </div>
+                    <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                        <h2 class="text-xl font-bold mb-4">Quick Links</h2>
+                        <ul class="text-sm">
+                            <li class="mb-2">Blogs</li>
+                            <li class="mb-2">Case Study</li>
+                            <li class="mb-2">Gallery</li>
+                            <li class="mb-2">Testimonials</li>
+                            <li class="mb-2">Media Center</li>
+                        </ul>
+                    </div>
+                    <div class="w-full md:w-1/4">
+                        <h2 class="text-xl font-bold mb-4">Legal</h2>
+                        <ul class="text-sm">
+                            <li class="mb-2">Privacy Policy</li>
+                            <li class="mb-2">Terms and Conditions</li>
+                            <li class="mb-2">Disclaimer</li>
+                            <li class="mb-2">Compliance</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center mt-10 border-t border-gray-700 pt-6">
+                    <p class="text-sm">© Copyright 2022 Group Concorde</p>
+                    <div class="flex items-center">
+                        <p class="text-sm mr-4">Follow Us</p>
+                        <a href="#" class="text-white mr-4"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white mr-4"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <p class="text-sm">Powered by Weaddo</p>
+                </div>
+            </div>
+        </footer>
+        <script>
+            const contentData = [
+                {
+                    heading: "General Sales & Service Agent",
+                    image: "https://storage.googleapis.com/a1aa/image/uqjErcx9ilLmtH0p_xl0cRl9vxiO8C1KyOytknDNYnI.jpg",
+                    content: "Phasellus malesuada lectus et ex vestibulum semper vitae et dolor. Phasellus posuere eu lorem vel aliquam. Vivamus egestas sit...dolor. Phasellus posuere eu lorem vel aliquam. Vivamus egestas sit...dolor. Phasellus posuere eu lorem vel aliquam. Vivamus egestas sit..."
+                },
+                {
+                    heading: "Cargo Handling",
+                    image: "https://storage.googleapis.com/a1aa/image/OxgL7sUt_L8Z0c7AUWgvy5DqGwxyc3EGVG6_gnln-wE.jpg",
+                    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam."
+                },
+                {
+                    heading: "Airplane Maintenance",
+                    image: "https://storage.googleapis.com/a1aa/image/qvTUIKis82ElZ-HdPPI9dvVG1CEG3XpLu88_4_C7J0w.jpg",
+                    content: "Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.portaporta"
+                }
+            ];
+
+            let currentIndex = 0;
+
+            function changeContent(action) {
+                if (action === 'prev') {
+                    currentIndex = (currentIndex === 0) ? contentData.length - 1 : currentIndex - 1;
+                } else if (action === 'next') {
+                    currentIndex = (currentIndex === contentData.length - 1) ? 0 : currentIndex + 1;
+                } else {
+                    currentIndex = action - 1;
+                }
+
+                document.getElementById('heading').innerText = contentData[currentIndex].heading;
+                document.getElementById('main-image').src = contentData[currentIndex].image;
+                document.getElementById('content').innerText = contentData[currentIndex].content;
+            }
+        </script>
+
+        <script>
+
+            document.addEventListener('DOMContentLoaded', function () {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                });
+
+                document.querySelectorAll('.fade-in').forEach(element => {
+                    observer.observe(element);
+                });
+
+                const counters = document.querySelectorAll('.counter');
+                counters.forEach(counter => {
+                    const updateCount = () => {
+                        const target = +counter.getAttribute('data-target');
+                        const count = +counter.innerText;
+                        const increment = target / 200;
+
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count + increment);
+                            setTimeout(updateCount, 10);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+
+                    const observerCounter = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                updateCount();
+                                observerCounter.unobserve(entry.target);
+                            }
+                        });
+                    });
+
+                    observerCounter.observe(counter);
+                });
+            });
+        </script>
+        <script>
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.carousel-item');
+            const dots = document.querySelectorAll('.flex span');
+
+            function showSlide(index) {
+                slides[currentSlide].classList.remove('active');
+                dots[currentSlide].classList.remove('bg-red-500');
+                dots[currentSlide].classList.add('bg-gray-300');
+                currentSlide = index;
+                slides[currentSlide].classList.add('active');
+                dots[currentSlide].classList.remove('bg-gray-300');
+                dots[currentSlide].classList.add('bg-red-500');
+            }
+
+            setInterval(() => {
+                showSlide((currentSlide + 1) % slides.length);
+            }, 3000);
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const navToggle = document.querySelector('.nav-toggle');
+                const navOverlay = document.querySelector('.nav-overlay');
+                const navClose = document.querySelector('.nav-close');
+
+                // Open Navigation Menu
+                navToggle.addEventListener('click', () => {
+                    navOverlay.classList.add('active');
+                });
+
+                // Close Navigation Menu
+                navClose.addEventListener('click', () => {
+                    navOverlay.classList.remove('active');
+                });
+
+                // Close when clicking outside
+                navOverlay.addEventListener('click', (event) => {
+                    if (!event.target.closest(".nav-content")) {
+                        navOverlay.classList.remove("active");
+                    }
+                });
+            });
+
+        </script>
+        <script>
+            let currentIndex = 0;
+            let slides = document.querySelectorAll('.slide');
+            let dots = document.querySelectorAll('.dot');
+            let autoSlideInterval;
+    
+            function showSlide(index) {
+                if (index >= slides.length) {
+                    currentIndex = 0;
+                } else if (index < 0) {
+                    currentIndex = slides.length - 1;
+                } else {
+                    currentIndex = index;
+                }
+    
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                    dots[i].classList.remove('active');
+                });
+    
+                slides[currentIndex].classList.add('active');
+                dots[currentIndex].classList.add('active');
+            }
+    
+            function nextSlide() {
+                showSlide(currentIndex + 1);
+            }
+    
+            function prevSlide() {
+                showSlide(currentIndex - 1);
+            }
+    
+            function goToSlide(index) {
+                showSlide(index);
+            }
+    
+            function startAutoSlide() {
+                autoSlideInterval = setInterval(nextSlide, 5000);
+            }
+    
+            function stopAutoSlide() {
+                clearInterval(autoSlideInterval);
+            }
+    
+            // Auto-slide starts when the page loads
+            startAutoSlide();
+    
+            // Pause auto-slide on hover
+            document.querySelector('.slider-container').addEventListener('mouseenter', stopAutoSlide);
+            document.querySelector('.slider-container').addEventListener('mouseleave', startAutoSlide);
+        </script>
+
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="index.js"></script>
+
+</body>
+
+</html>

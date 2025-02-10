@@ -1,0 +1,507 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* 🖼 Background */
+.background {
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('images/Image\ 17.png') no-repeat center center/cover;
+    z-index: -1;
+}
+
+/* 🏠 Header */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 30px;
+}
+
+/* 📌 Aligning Elements */
+.logo {
+    max-height: 50px;
+}
+
+.phone-icon  {
+    width: 20px;
+    margin-right: 5px;
+    color: white;
+}
+
+.phone-number {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+/* 📌 Navigation Toggle */
+.nav-toggle {
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* 🎬 Full-Screen Navigation Overlay */
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background:#D9202A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 10%;
+    color: white;
+    text-align: left;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* 🎬 Show Navigation */
+.nav-overlay.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 📜 Navigation Menu */
+.nav-menu {
+    width: 40%;
+}
+
+.nav-menu ul {
+    list-style: none!important;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    font-size: 1.4rem;
+    font-weight: normal;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 8px;
+    margin-bottom: 25px; /* Adjusted for proper spacing */
+    list-style: none;
+}
+
+/* Remove bullet points */
+.nav-menu li::before {
+    content: none;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ❌ Close Button */
+.nav-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    color: white;
+    font-size: 1.2rem;
+    border: 1px solid white;
+    padding: 8px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+/* ℹ️ Extra Info (Right-Aligned) */
+.nav-info {
+    position: absolute;
+    right: 29%;
+    top: 35%;
+}
+
+
+/* 🔗 Social Media (Below Menu, In Same Line) */
+.nav-social {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.nav-social span {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+    margin-right: 10px;
+}
+
+.nav-social a {
+    font-size: 1.2rem;
+    color: white;
+    margin-left: 12px;
+    transition: color 0.3s ease;
+}
+
+.nav-social a:hover {
+    color: #ddd;
+}
+/* Circular Icons */
+.social-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #D9202A;
+    border: 2px solid white!important;
+    color:white;
+    font-size: 1rem;
+    margin-left: 10px;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect */
+.social-circle:hover {
+    background-color: #D9202A;
+    color: white;
+}
+.container {
+    margin-top: 100px; /* Ensures content is below the banner */
+    padding-top: 50px;
+}
+/* ✅ Section Styling */
+.representation-section {
+    margin-top: -6%;
+    background-color: #f9f9f9;
+    margin-bottom: -16%;
+}
+
+/* ✅ Title & Description */
+.title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #222;
+    margin-bottom: 36px;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* ✅ Airplane Image */
+.flight-path-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    opacity: 0.9;
+    display: block;
+    margin: -132px auto;
+}
+
+/* ✅ Counter Section */
+.counter-section {
+    margin-top: 40px;
+}
+
+.counter-box {
+    padding: 20px;
+    text-align: center;
+}
+
+.counter {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #d9202a;
+    margin-bottom: 5px;
+}
+
+.counter-label {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* ✅ Our Solutions (Aligned Left) */
+.section-title {
+    font-size: 2rem;
+    font-weight: 300;
+    color: #222;
+    margin-bottom: 36px;
+}
+
+.section-text {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* ✅ Fixing Misalignment */
+.align-items-center {
+    display: flex;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.slide {
+    min-width: 102%;
+    box-sizing: border-box;
+}
+.news-title {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+.view-all {
+        color: red;
+        font-size: 120%;
+        text-decoration: none;
+        font-weight: 400;
+        position: relative;
+        right: 5%; /* Ensures alignment */
+    }
+    
+    .news-item img {
+        width: 100%;
+        height: 300%;
+        object-fit: cover;
+    }
+.news-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 0.5rem;
+}
+.news-caption h2 {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+.news-caption p {
+    font-size: 0.875rem;
+}
+.footer {
+    background-color: #1a202c;
+    color: #ffffff;
+}
+ /* Container Styles */
+ .carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background: url('https://placehold.co/1200x600') no-repeat center center;
+    background-size: cover;
+    color: white;
+    border-radius: 10px;
+}
+
+/* Main Carousel */
+.carousel-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-image {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.text-content {
+    max-width: 400px;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Navigation Arrows */
+.nav-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+.nav-buttons i {
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+}
+
+/* Thumbnail Section */
+.carousel-thumbnails {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.carousel-thumbnails img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.bg{
+    font-family: 'Arial', sans-serif;
+    background: url('https://storage.googleapis.com/a1aa/image/hi6YVgAg6__VV4G-klq-WMeFk25qoRh0PEYAHdZgpQQ.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+.heading{
+    font-size: 2rem;
+}
+.content {
+    width: 88%;
+    margin-top: 73px;
+}
+.content-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+.content-container img {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    border-radius: 10px;
+}
+.slider img {
+    width: 173px;
+    height: 212px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.slider {
+    display: flex;
+    gap: 10px;
+}
+.arrow-buttons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.arrow-buttons button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.carousel-item {
+    display: none;
+}
+
+.carousel-item.active {
+    display: block;
+}
+.carousel-item{
+    height: 50%;
+
+}
+.main{
+    margin-top: 112px;
+}
+.card{
+    height: 16%;
+}
+.network{
+    margin-top: -140px
+}
+/* ✅ Responsive Fixes */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .flight-path-img {
+        max-width: 300px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .section-text {
+        text-align: center;
+    }
+}
+
+
+
+/* ✅ Responsive Fixes */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .flight-path-img {
+        max-width: 300px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .section-text {
+        text-align: center;
+    }
+}
+
+
+/* Responsive Design for Mobile */
+@media (max-width: 767px) {
+    .slider-section {
+        padding: 20px 0;
+    }
+    
+    .text-left h2 {
+        font-size: 1.8rem;
+    }
+
+    .slider-container {
+        max-width: 100%;
+    }
+}
