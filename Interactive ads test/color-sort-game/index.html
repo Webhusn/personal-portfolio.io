@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Color Sort Puzzle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Color Sort Puzzle</h2>
+  <label for="difficulty">Choose Level:</label>
+  <select id="difficulty" onchange="setLevel(this.value)">
+    <option value="easy">Easy (4 Colors)</option>
+    <option value="medium" selected>Medium (5 Colors)</option>
+    <option value="hard">Hard (6 Colors)</option>
+  </select>
+  <button onclick="resetGame()" class="reset-btn">🔄 Reset Puzzle</button>
+  <div id="game-board" class="game-board" style="display:none;"></div>
+  <p id="score" class="message">Moves: 0</p>
+  <p id="timer" class="message">Time: 03:00</p>
+  <p id="highscore" class="message">Best: --</p>
+  <p id="message" class="message"></p>
+  <div id="intro-screen" style="width:100%; height:600px; background:#421e0f; color:white; font-size:30px; display:flex; align-items:center; justify-content:center; font-weight:bold;">
+    🧠 Sort the colors to win!
+  </div>
+    <!-- Play Store Button (Visible after 26 seconds) -->
+    <a id="download-btn" href="https://play.google.com/store/apps/details?id=com.colorwood.sortpuzzle" target="_blank"
+       style="display:none;">
+       ▶️ Play Now on Play Store
+    </a>
+  
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+body {
+  background-color: #421e0f;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  margin-top: 20px;
+}
+.game-board {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px auto;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+.column {
+  width: 60px;
+  height: 600px;
+  background-image: url("images/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+.block {
+  width: 48px;
+  height: 48px;
+  margin: 2px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.column::after {
+  content: attr(data-tick);
+  position: absolute;
+  top: -24px;
+  left: 20px;
+  font-size: 24px;
+  color: lime;
+  font-weight: bold;
+}
+.message {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: lightgreen;
+}
+.reset-btn {
+  margin: 10px;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.reset-btn:hover {
+  background-color: #ffdb4d;
+}
+#difficulty{
+  margin: 10px;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+
+}
+/* Play Store Button */
+#download-btn {
+  z-index: 9999;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 20px;
+  background: #ffc107;
+  color: black;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+}
