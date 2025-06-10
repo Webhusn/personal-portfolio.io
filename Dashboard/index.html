@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html></html>
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>iDreamBiz Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+  <aside class="sidebar" role="navigation" aria-label="Sidebar navigation">
+    <button aria-label="Dashboard" title="Dashboard">
+      <i class="fas fa-th-large"></i>
+    </button>
+    <button aria-label="Chat" title="Chat">
+      <i class="fas fa-comment-alt"></i>
+    </button>
+    <button aria-label="Phone" title="Phone">
+      <i class="fas fa-phone"></i>
+    </button>
+  </aside>
+  <main class="content">
+    <header class="topbar">
+      <div class="logo">iDreamBiz</div>
+      <form role="search" aria-label="Site search">
+        <input type="search" placeholder="Search" aria-label="Search" />
+        <button type="submit" aria-label="Submit search">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+    </header>
+    <section>
+      <h1>My Dashboard</h1>
+      <div class="stats-charts">
+        <div class="stats-left">
+          <div class="stat-card">
+            <p class="label">Total Calls Originated</p>
+            <p class="value">9232</p>
+          </div>
+          <div class="stat-card">
+            <p class="label">Answered Calls</p>
+            <div class="value-with-change">
+              <p class="value">7293</p>
+              <p class="change-positive">+78.9%</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <p class="label">Abandoned Calls</p>
+            <div class="value-with-change">
+              <p class="value">1939</p>
+              <p class="change-negative">-21.1%</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <p class="label">Total Talk Time</p>
+            <p class="value">730<span class="unit">Hrs</span></p>
+          </div>
+          <div class="stat-card">
+            <p class="label">Avg. Wait Time</p>
+            <p class="value">1<span class="unit">min 50sec</span></p>
+          </div>
+          <div class="stat-card">
+            <p class="label">Avg. Call Time</p>
+            <p class="value">6<span class="unit">min 15sec</span></p>
+          </div>
+        </div>
+        <div class="stats-right">
+          <div class="stats-controls" role="tablist" aria-label="Time range selection">
+            <button class="active" role="tab" aria-selected="true" tabindex="0">Today</button>
+            <button role="tab" aria-selected="false" tabindex="-1">Week</button>
+            <button role="tab" aria-selected="false" tabindex="-1">Month</button>
+            <button role="tab" aria-selected="false" tabindex="-1" aria-label="Select Date">
+              Select Date <i class="far fa-calendar-alt"></i>
+            </button>
+          </div>
+          <div class="charts">
+            <div class="chart-card" role="img" aria-label="Issue Status donut chart showing Unresolved, Resolved, and Pending">
+              <p class="title">Issue Status</p>
+              <img
+                src="https://storage.googleapis.com/a1aa/image/78122d46-e06d-4130-2321-3af209f67704.jpg"
+                alt="Donut chart showing issue status with sections for Unresolved, Resolved, and Pending in blue, purple, and orange colors"
+                width="150"
+                height="150"
+              />
+              <div class="chart-legend">
+                <span><span class="dot unresolved"></span>Unresolved</span>
+                <span><span class="dot resolved"></span>Resolved</span>
+                <span><span class="dot pending"></span>Pending</span>
+              </div>
+            </div>
+            <div class="chart-card large" role="img" aria-label="Issue Category bar chart showing AVC, e-Mandate, KYC, ATS, and Others">
+              <p class="title">Issue Category</p>
+              <img
+                src="https://storage.googleapis.com/a1aa/image/686d2844-7b04-4e0c-58a3-f97d43ad9a16.jpg"
+                alt="Bar chart showing issue categories with bars for AVC, e-Mandate, KYC, ATS, and Others in blue and purple colors"
+                width="400"
+                height="150"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="call-analytics" aria-label="Call Analytics">
+        <div class="call-analytics-controls" role="tablist" aria-label="Call analytics status">
+          <button class="active" role="tab" aria-selected="true" tabindex="0">History</button>
+          <button role="tab" aria-selected="false" tabindex="-1">In Progress</button>
+        </div>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col" style="width: 9rem;">Dealer Name</th>
+                <th scope="col" style="width: 12rem;">Additional Info</th>
+                <th scope="col" style="width: 7rem;">Issue Category</th>
+                <th scope="col" style="width: 7rem;">Issue Status</th>
+                <th scope="col" style="width: 7rem;">Comments</th>
+                <th scope="col" style="width: 7rem;">Call Status</th>
+                <th scope="col" style="width: 9rem;">Call Details</th>
+                <th scope="col" style="width: 6rem;">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="dealer-cell">
+                  <img src="https://storage.googleapis.com/a1aa/image/77e1ee87-cb30-4c6a-bf14-8d1ec23f6122.jpg" alt="Dealer logo for Ritik Beniwal" />
+                  <div class="dealer-info">
+                    <p class="dealer-name">Ritik Beniwal</p>
+                    <p class="dealer-id">DMI029384</p>
+                  </div>
+                </td>
+                <td class="additional-info">
+                  <p>Lead</p>
+                  <p>03AAAKDJ9283KNS4NDI</p>
+                </td>
+                <td class="issue-category">KYC</td>
+                <td class="issue-status unresolved">UnResolved</td>
+                <td class="comments">Lorem Ipsum</td>
+                <td class="call-status rescheduled">Rescheduled</td>
+                <td class="call-details">
+                  20 Apr 2025
+                  <span>01:12 PM | 04:12 min</span>
+                </td>
+                <td class="action-buttons">
+                  <button aria-label="View details"><i class="fas fa-eye"></i></button>
+                  <button aria-label="Edit"><i class="fas fa-edit"></i></button>
+                  <button aria-label="Copy"><i class="fas fa-copy"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="dealer-cell">
+                  <img src="https://storage.googleapis.com/a1aa/image/400dc920-8cc5-4d5f-e27c-e6f6b9be8a0c.jpg" alt="Dealer logo for Manpreet Singh" />
+                  <div class="dealer-info">
+                    <p class="dealer-name">Manpreet Singh</p>
+                    <p class="dealer-id">DMI029384</p>
+                  </div>
+                </td>
+                <td class="additional-info">
+                  <p>Opportunity</p>
+                  <p>03AAAKDJ9283KNS4NDI</p>
+                </td>
+                <td class="issue-category">e-Mandate</td>
+                <td class="issue-status resolved">Resolved</td>
+                <td class="comments">Lorem Ipsum</td>
+                <td class="call-status scheduled">Scheduled</td>
+                <td class="call-details">
+                  20 Apr 2025
+                  <span>01:12 PM | 04:12 min</span>
+                </td>
+                <td class="action-buttons">
+                  <button aria-label="View details"><i class="fas fa-eye"></i></button>
+                  <button aria-label="Edit"><i class="fas fa-edit"></i></button>
+                  <button aria-label="Copy"><i class="fas fa-copy"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="dealer-cell">
+                  <img src="https://storage.googleapis.com/a1aa/image/99d66598-f396-44a7-265f-63f027d2d1f4.jpg" alt="Dealer logo for Avika Sharma" />
+                  <div class="dealer-info">
+                    <p class="dealer-name">Avika Sharma</p>
+                    <p class="dealer-id">DMI029384</p>
+                  </div>
+                </td>
+                <td class="additional-info">
+                  <p>NACH</p>
+                  <p>03AAAKDJ9283KNS4NDI</p>
+                </td>
+                <td class="issue-category">e-Mandate</td>
+                <td class="issue-status pending">Pending</td>
+                <td class="comments">Lorem Ipsum</td>
+                <td class="call-status ended">Ended</td>
+                <td class="call-details">
+                  20 Apr 2025
+                  <span>01:12 PM | 04:12 min</span>
+                </td>
+                <td class="action-buttons">
+                  <button aria-label="View details"><i class="fas fa-eye"></i></button>
+                  <button aria-label="Edit"><i class="fas fa-edit"></i></button>
+                  <button aria-label="Copy"><i class="fas fa-copy"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="dealer-cell">
+                  <img src="https://storage.googleapis.com/a1aa/image/28d0fc88-76ad-484d-1604-a1e28e921b1b.jpg" alt="Dealer logo for Saurabh Kumar" />
+                  <div class="dealer-info">
+                    <p class="dealer-name">Saurabh Kumar</p>
+                    <p class="dealer-id">DMI029384</p>
+                  </div>
+                </td>
+                <td class="additional-info">
+                  <p>Contact ID</p>
+                  <p>03AAAKDJ9283KNS4NDI</p>
+                </td>
+                <td class="issue-category">e-Mandate</td>
+                <td class="issue-status resolved">Resolved</td>
+                <td class="comments">Lorem Ipsum</td>
+                <td class="call-status ended">Ended</td>
+                <td class="call-details">
+                  20 Apr 2025
+                  <span>01:12 PM | 04:12 min</span>
+                </td>
+                <td class="action-buttons">
+                  <button aria-label="View details"><i class="fas fa-eye"></i></button>
+                  <button aria-label="Edit"><i class="fas fa-edit"></i></button>
+                  <button aria-label="Copy"><i class="fas fa-copy"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="dealer-cell">
+                  <img src="https://storage.googleapis.com/a1aa/image/69b38fb0-fdca-4325-6bf4-39063fe96ef0.jpg" alt="Dealer logo for Hrithik Runak" />
+                  <div class="dealer-info">
+                    <p class="dealer-name">Hrithik Runak</p>
+                    <p class="dealer-id">DMI029384</p>
+                  </div>
+                </td>
+                <td class="additional-info">
+                  <p>Payment ID</p>
+                  <p>03AAAKDJ9283KNS4NDI</p>
+                </td>
+                <td class="issue-category">e-Mandate</td>
+                <td class="issue-status pending">Pending</td>
+                <td class="comments">Lorem Ipsum</td>
+                <td class="call-status ended">Ended</td>
+                <td class="call-details">
+                  20 Apr 2025
+                  <span>01:12 PM | 04:12 min</span>
+                </td>
+                <td class="action-buttons">
+                  <button aria-label="View details"><i class="fas fa-eye"></i></button>
+                  <button aria-label="Edit"><i class="fas fa-edit"></i></button>
+                  <button aria-label="Copy"><i class="fas fa-copy"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="dealer-cell">
+                  <img src="https://storage.googleapis.com/a1aa/image/23503351-f054-47cb-7709-09925148a177.jpg" alt="Dealer logo for Naman Jain" />
+                  <div class="dealer-info">
+                    <p class="dealer-name">Naman Jain</p>
+                    <p class="dealer-id">DMI029384</p>
+                  </div>
+                </td>
+                <td class="additional-info">
+                  <p>Lead</p>
+                  <p>03AAAKDJ9283KNS4NDI</p>
+                </td>
+                <td class="issue-category">e-Mandate</td>
+                <td class="issue-status unresolved">UnResolved</td>
+                <td class="comments">Lorem Ipsum</td>
+                <td class="call-status cancelled">Cancelled</td>
+                <td class="call-details">
+                  20 Apr 2025
+                  <span>01:12 PM | 04:12 min</span>
+                </td>
+                <td class="action-buttons">
+                  <button aria-label="View details"><i class="fas fa-eye"></i></button>
+                  <button aria-label="Edit"><i class="fas fa-edit"></i></button>
+                  <button aria-label="Copy"><i class="fas fa-copy"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
