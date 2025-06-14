@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Learn by Doing 3.1</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #555;
+    background: #e0e0e0;
+  }
+  .quiz {
+    background: #fff;
+    padding: 20px 30px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(0 0 0 / 0.1);
+  }
+  .quiz h1 {
+    color: #888;
+    margin-bottom: 20px;
+  }
+  .quiz p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  .quiz ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 15px;
+  }
+  .quiz ul li {
+    margin-bottom: 10px;
+  }
+  .quiz ul li input {
+    margin-right: 10px;
+  }
+  .quiz button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .quiz button:hover {
+    background: #0056b3;
+  }
+  #resultMsg {
+    margin-top: 20px;
+    color: green;
+    font-size: 18px;
+  }
+</style>
+</head>
+<body>
+
+  <div class="quiz">
+    <h1>Learn by Doing 3.1</h1>
+
+    <h2>Read the following scenario</h2>
+
+    <p>A company decides to survey its employees to understand their satisfaction with the new flexible working hours. On Monday at 9 a.m., a survey questionnaire is administered to the first 200 employees who start their working day.</p>
+
+    <h3>A. Which of the following might negatively affect the outcome of the survey? Check all that apply.</h3>
+    <ul>
+      <li><input id="q1" type="checkbox"><label for="q1"> A sample of 200 is too small.</label></li>
+      <li><input id="q2" type="checkbox"><label for="q2"> Monday at 9 a.m. is not a good moment to administer a survey.</label></li>
+      <li><input id="q3" type="checkbox"><label for="q3"> The sample is not random.</label></li>
+    </ul>
+
+    <h3>B. What would be the best time to distribute a questionnaire during a three-day conference?</h3>
+    <ul>
+      <li><input id="q4" name="q4" type="radio"><label for="q4"> At the start of the conference</label></li>
+      <li><input id="q5" name="q4" type="radio"><label for="q5"> On the second day of the conference</label></li>
+      <li><input id="q6" name="q4" type="radio"><label for="q6"> At the end of the conference</label></li>
+    </ul>
+
+    <button id="submitBtn">Submit</button>
+
+    <h3 id="resultMsg"></h3>
+
+  </div>
+
+<script>
+  document.getElementById('submitBtn').addEventListener('click', function(){
+    // Gather answers
+    const q1 = document.getElementById('q1').checked;
+    const q2 = document.getElementById('q2').checked;
+    const q3 = document.getElementById('q3').checked;
+
+    const q4 = document.querySelector('input[name="q4"]:checked');
+
+    let result = "Your answers have been submitted!";
+
+    if (q1) result += "<br>- A sample of 200 is too small.";
+    if (q2) result += "<br>- Monday at 9 a.m. is not a good moment.";
+    if (q3) result += "<br>- The sample is not random.";
+    if (q4) result += "<br>- Best time for questionnaire: " + 
+      (q4.id == "q4" ? "At the start of the conference" : 
+       q4.id == "q5" ? "On the second day of the conference" : 
+       "At the end of the conference");
+
+    document.getElementById('resultMsg').innerHTML = result;
+  });
+</script>
+
+</body>
+</html>
